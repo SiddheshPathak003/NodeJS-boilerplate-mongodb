@@ -7,6 +7,7 @@ const router = require("./src/routes/auth");
 
 dotenv.config();
 const app = express();
+app.set("view engine", "jade");
 let PORT = process.env.PORT || 3000;
 
 mongoose.connect(process.env.MONGODB_URL).then(() => {
